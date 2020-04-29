@@ -1,0 +1,27 @@
+# This is a trigger workflow to trigger the Hexo-Blog-Deploy action in [Hexo-Blog repo](https://github.com/YK-Unit/Hexo-Blog)
+
+name: Cooking-Blog-Deploy-Trigger
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+    paths-ignore: ["README.md", "LICENSE.md", ".gitignore", ".github/**", "template/**"]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:      
+    # from: https://github.com/marketplace/actions/hexo-action
+    - name: Trigger the Cooking-Blog-Deploy action
+      uses: peter-evans/repository-dispatch@v1
+      with:
+        token: ${{ secrets.PAT_For_Workflow }}
+        repository: YK-Unit/YK-Unit.github.io
+        event-type: deploy-blog-event
