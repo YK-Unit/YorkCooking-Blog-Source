@@ -1,4 +1,4 @@
-# This is a trigger workflow to trigger the Hexo-Blog-Deploy action in [Hexo-Blog repo](https://github.com/YK-Unit/Hexo-Blog)
+# This is a trigger workflow to trigger the Cooking-Blog-Deploy action in [YK-Unit.github.io repo](https://github.com/YK-Unit/YK-Unit.github.io)
 
 name: Cooking-Blog-Deploy-Trigger
 
