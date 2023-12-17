@@ -20,7 +20,7 @@ jobs:
     steps:      
     # from: https://github.com/marketplace/actions/repository-dispatch
     - name: Trigger the Cooking-Blog-Deploy action
-      uses: peter-evans/repository-dispatch@v1
+      uses: peter-evans/repository-dispatch@v2.1.2
       with:
         token: ${{ secrets.BLOG_SOURCE_PAT }}
         repository: "YK-Unit/YK-Unit.github.io"
