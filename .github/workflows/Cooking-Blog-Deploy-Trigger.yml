@@ -22,6 +22,6 @@ jobs:
     - name: Trigger the Cooking-Blog-Deploy action
       uses: peter-evans/repository-dispatch@v1
       with:
-        token: ${{ secrets.Blog_Workflow_PAT }}
+        token: ${{ secrets.BLOG_SOURCE_PAT }}
         repository: "YK-Unit/YK-Unit.github.io"
         event-type: deploy-blog-event
